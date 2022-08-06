@@ -11,13 +11,16 @@ function Expenses({ item }) {
     setYear(selectedYear);
   };
 
+  const filteredExpenses = item.filter((v) => {
+    return v.date.getFullYear().toString() === year;
+  });
+
   return (
     <Card className="expenses">
       <ExpensesFilter selected={year} onChangeFilter={filterChangeHandler} />
-      <ExpenseItem title={item[0].title} amount={item[0].amount} date={item[0].date} />
-      <ExpenseItem title={item[1].title} amount={item[1].amount} date={item[1].date} />
-      <ExpenseItem title={item[2].title} amount={item[2].amount} date={item[2].date} />
-      <ExpenseItem title={item[3].title} amount={item[3].amount} date={item[3].date} />
+      {filteredExpenses.map((v) => (
+        <ExpenseItem key={v.id} title={v.title} amount={v.amount} date={v.date} />
+      ))}
     </Card>
   );
 }
