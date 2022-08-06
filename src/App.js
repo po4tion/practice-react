@@ -4,10 +4,10 @@ import Expenses from "./components/Expenses/Expenses";
 import NewExpense from "./components/NewExpense/NewExpense";
 
 const DUMMYEXPENSES = [
-  { id: "id_01", title: "Car Insurance1", amount: 294.67, date: new Date(2022, 8, 7) },
-  { id: "id_02", title: "Car Insurance2", amount: 294.67, date: new Date(2022, 8, 7) },
-  { id: "id_03", title: "Car Insurance3", amount: 294.67, date: new Date(2022, 8, 7) },
-  { id: "id_04", title: "Car Insurance4", amount: 294.67, date: new Date(2022, 8, 7) },
+  { id: "id_01", title: "Car Insurance1", amount: 294.67, date: new Date(2022, 5, 7) },
+  { id: "id_02", title: "Car Insurance2", amount: 50, date: new Date(2022, 8, 7) },
+  { id: "id_03", title: "Car Insurance3", amount: 25, date: new Date(2022, 7, 7) },
+  { id: "id_04", title: "Car Insurance4", amount: 80, date: new Date(2021, 8, 7) },
 ];
 
 function App() {
